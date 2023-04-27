@@ -18,4 +18,4 @@ jobs:
           ssh-keyscan 159.65.144.36 >> ~/.ssh/known_hosts
       - name: SSH into server and pull changes
         run: |
-          ssh root@159.65.144.36 "cd /tmp/test && git pull && /etc/init.d/apace-server stop && /etc/init.d/apace-server start && echo 'Deployment successful!'"
+          ssh root@159.65.144.36 "cd /opt/apace/apace_repo && git pull && /etc/init.d/apace-server stop && /etc/init.d/apace-server start && echo 'Deployment successful!'"
